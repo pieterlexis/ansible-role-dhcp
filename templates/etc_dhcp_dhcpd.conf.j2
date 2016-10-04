@@ -121,6 +121,14 @@ subnet {{ subnet.ip }} netmask {{ subnet.netmask }} {
 {% endfor %}
 {% endif %}
 
+{% if subnet.events is defined %}
+{% for event in subnet.events %}
+  on {{event}} {
+    {{ ';\n    '.join(subnet.events[event]) }};
+  }
+{% endfor %}
+{% endif %}
+
 {% if subnet.pools is defined %}
   # Address pool(s)
 {% for pool in subnet.pools %}

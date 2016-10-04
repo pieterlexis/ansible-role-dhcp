@@ -112,6 +112,7 @@ An alphabetical list of supported options in a subnet declaration:
 | `default_lease_time`  | no       | Default lease time for this subnet (in seconds)                       |
 | `domain_name_servers` | no       | List of domain name servers for this subnet(1)                        |
 | `domain_search`       | no       | List of domain names for resolution of non-FQDNs(1)                   |
+| `events`              | no       | Dictionary with lists of statements, keyed on the event name.         |
 | `filename`            | no       | filename to retrieve from boot server                                 |
 | `hosts`               | no       | A list of dicts specifying host declarations. See below.              |
 | `ip`                  | yes      | **Required.** IP address of the subnet                                |
